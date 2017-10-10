@@ -12,6 +12,7 @@
 		4ACEA14B1F8D64FF0048413D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA1491F8D64FF0048413D /* Main.storyboard */; };
 		4ACEA14D1F8D64FF0048413D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14C1F8D64FF0048413D /* Assets.xcassets */; };
 		4ACEA1501F8D64FF0048413D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */; };
+		4ACEA1591F8D78910048413D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1581F8D78910048413D /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4ACEA14C1F8D64FF0048413D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ACEA14F1F8D64FF0048413D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ACEA1511F8D64FF0048413D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ACEA1581F8D78910048413D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4ACEA1441F8D64FF0048413D /* Interstellar */ = {
 			isa = PBXGroup;
 			children = (
+				4ACEA1571F8D787F0048413D /* Helper */,
 				4ACEA1451F8D64FF0048413D /* AppDelegate.swift */,
 				4ACEA1471F8D64FF0048413D /* ViewController.swift */,
 				4ACEA1491F8D64FF0048413D /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				4ACEA1511F8D64FF0048413D /* Info.plist */,
 			);
 			path = Interstellar;
+			sourceTree = "<group>";
+		};
+		4ACEA1571F8D787F0048413D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4ACEA1581F8D78910048413D /* Extensions.swift */,
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ACEA1481F8D64FF0048413D /* ViewController.swift in Sources */,
+				4ACEA1591F8D78910048413D /* Extensions.swift in Sources */,
 				4ACEA1461F8D64FF0048413D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
