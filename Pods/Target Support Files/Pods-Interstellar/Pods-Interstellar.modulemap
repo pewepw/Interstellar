@@ -1,0 +1,6 @@
+framework module Pods_Interstellar {
+  umbrella header "Pods-Interstellar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,9 +13,13 @@
 		4ACEA14D1F8D64FF0048413D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14C1F8D64FF0048413D /* Assets.xcassets */; };
 		4ACEA1501F8D64FF0048413D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */; };
 		4ACEA1591F8D78910048413D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1581F8D78910048413D /* Extensions.swift */; };
+		4ACEEC981F8E6DCB0090B795 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEEC971F8E6DCB0090B795 /* GoogleService-Info.plist */; };
+		7F9604A0EE9F60F8847E2291 /* Pods_Interstellar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483BF3137CD0437DFF669271 /* Pods_Interstellar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F776F3AB72EA625D57D53C9 /* Pods-Interstellar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interstellar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar.release.xcconfig"; sourceTree = "<group>"; };
+		483BF3137CD0437DFF669271 /* Pods_Interstellar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interstellar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACEA1421F8D64FF0048413D /* Interstellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interstellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACEA1451F8D64FF0048413D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ACEA1471F8D64FF0048413D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		4ACEA14F1F8D64FF0048413D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4ACEA1511F8D64FF0048413D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ACEA1581F8D78910048413D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4ACEEC971F8E6DCB0090B795 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3AC1056B9138C23917DA474 /* Pods-Interstellar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interstellar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9604A0EE9F60F8847E2291 /* Pods_Interstellar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02823BE7A78BB3FB011A9129 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483BF3137CD0437DFF669271 /* Pods_Interstellar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		078AA42DCCCC30ADCE79C0C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3AC1056B9138C23917DA474 /* Pods-Interstellar.debug.xcconfig */,
+				0F776F3AB72EA625D57D53C9 /* Pods-Interstellar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4ACEA1391F8D64FF0048413D = {
 			isa = PBXGroup;
 			children = (
 				4ACEA1441F8D64FF0048413D /* Interstellar */,
 				4ACEA1431F8D64FF0048413D /* Products */,
+				078AA42DCCCC30ADCE79C0C3 /* Pods */,
+				02823BE7A78BB3FB011A9129 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +85,11 @@
 				4ACEA1571F8D787F0048413D /* Helper */,
 				4ACEA1451F8D64FF0048413D /* AppDelegate.swift */,
 				4ACEA1471F8D64FF0048413D /* ViewController.swift */,
+				4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */,
 				4ACEA1491F8D64FF0048413D /* Main.storyboard */,
 				4ACEA14C1F8D64FF0048413D /* Assets.xcassets */,
-				4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */,
 				4ACEA1511F8D64FF0048413D /* Info.plist */,
+				4ACEEC971F8E6DCB0090B795 /* GoogleService-Info.plist */,
 			);
 			path = Interstellar;
 			sourceTree = "<group>";
@@ -82,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4ACEA1541F8D64FF0048413D /* Build configuration list for PBXNativeTarget "Interstellar" */;
 			buildPhases = (
+				A900E6B1640325EFC909410C /* [CP] Check Pods Manifest.lock */,
 				4ACEA13E1F8D64FF0048413D /* Sources */,
 				4ACEA13F1F8D64FF0048413D /* Frameworks */,
 				4ACEA1401F8D64FF0048413D /* Resources */,
+				462C8EFC379C0F88F0F935E7 /* [CP] Embed Pods Frameworks */,
+				BDEF1FF6C43FB7683B259A4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,12 +166,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ACEA1501F8D64FF0048413D /* LaunchScreen.storyboard in Resources */,
+				4ACEEC981F8E6DCB0090B795 /* GoogleService-Info.plist in Resources */,
 				4ACEA14D1F8D64FF0048413D /* Assets.xcassets in Resources */,
 				4ACEA14B1F8D64FF0048413D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462C8EFC379C0F88F0F935E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A900E6B1640325EFC909410C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Interstellar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDEF1FF6C43FB7683B259A4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4ACEA13E1F8D64FF0048413D /* Sources */ = {
@@ -273,6 +364,7 @@
 		};
 		4ACEA1551F8D64FF0048413D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3AC1056B9138C23917DA474 /* Pods-Interstellar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFR3UJ9GH9;
@@ -286,6 +378,7 @@
 		};
 		4ACEA1561F8D64FF0048413D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F776F3AB72EA625D57D53C9 /* Pods-Interstellar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EFR3UJ9GH9;
@@ -316,6 +409,7 @@
 				4ACEA1561F8D64FF0048413D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
     }()
     
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
     }()
     
@@ -45,6 +50,8 @@ class ViewController: UIViewController {
         tf.backgroundColor = UIColor(white: 0, alpha: 0.03)
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
+        
+        tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         return tf
     }()
     
@@ -55,8 +62,37 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
+        
+        button.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        button.isEnabled = false
         return button
     }()
+    
+    func handleTextInputChange() {
+        let isFormValid = emailTextField.text?.characters.count ?? 0 > 0 && usernameTextField.text?.characters.count ?? 0 > 0 && passwordTextField.text?.characters.count ?? 0 > 0
+        
+        if isFormValid {
+            signUpButton.isEnabled = true
+            signUpButton.backgroundColor = UIColor.rgb(red: 17, green: 154, blue: 237)
+        } else {
+            signUpButton.isEnabled = false
+            signUpButton.backgroundColor = UIColor.rgb(red: 149, green: 204, blue: 244)
+        }
+        
+    }
+    
+    func handleSignUp() {
+        guard let email = emailTextField.text, !email.isEmpty, let username = usernameTextField.text, !username.isEmpty, let password = passwordTextField.text, !password.isEmpty else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,35 +128,5 @@ class ViewController: UIViewController {
     
 }
 
-extension UIView {
-    func anchor(top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?, paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat, height: CGFloat) {
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        if let top = top {
-            topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
-        }
-        
-        if let left = left {
-            leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
-        }
-        
-        if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
-        }
-        
-        if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
-        }
-        
-        if width != 0 {
-            widthAnchor.constraint(equalToConstant: width).isActive = true
-        }
-        
-        if height != 0 {
-            heightAnchor.constraint(equalToConstant: height).isActive = true
-        }
-        
-    }
-}
+
 
