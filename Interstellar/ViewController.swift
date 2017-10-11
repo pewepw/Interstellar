@@ -22,29 +22,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return button
     }()
     
-    func handlePlusPhoto() {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.allowsEditing = true
-        present(imagePickerController, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-            plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
-        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            plusPhotoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
-        }
-        
-        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
-        plusPhotoButton.layer.masksToBounds = true
-        plusPhotoButton.layer.borderColor = UIColor.black.cgColor
-        plusPhotoButton.layer.borderWidth = 3
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
     let emailTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Email"
@@ -94,6 +71,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         button.isEnabled = false
         return button
     }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(plusPhotoButton)
+        plusPhotoButton.heightAnchor.constraint(equalToConstant: 140).isActive = true
+        plusPhotoButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        plusPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        plusPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        
+        setupInputFields()
+        
+    }
+    
+    fileprivate func setupInputFields() {
+        let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
+        //stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fillEqually
+        stackView.axis = .vertical
+        stackView.spacing = 10
+        
+        view.addSubview(stackView)
+        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: 0, height: 200)
+        
+        //        NSLayoutConstraint.activate([
+        //            stackView.topAnchor.constraint(equalTo: plusPhotoButton.bottomAnchor, constant: 20),
+        //            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
+        //            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
+        //            stackView.heightAnchor.constraint(equalToConstant: 200)
+        //            ])
+        
+    }
     
     func handleTextInputChange() {
         let isFormValid = emailTextField.text?.characters.count ?? 0 > 0 && usernameTextField.text?.characters.count ?? 0 > 0 && passwordTextField.text?.characters.count ?? 0 > 0
@@ -152,44 +161,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     
                     print("successfully save user into database")
                 })
-                
-                
             })
-            
-            
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.addSubview(plusPhotoButton)
-        plusPhotoButton.heightAnchor.constraint(equalToConstant: 140).isActive = true
-        plusPhotoButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
-        plusPhotoButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        plusPhotoButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
-        
-        setupInputFields()
-        
+    func handlePlusPhoto() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
+        present(imagePickerController, animated: true, completion: nil)
     }
     
-    fileprivate func setupInputFields() {
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, usernameTextField, passwordTextField, signUpButton])
-        //stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fillEqually
-        stackView.axis = .vertical
-        stackView.spacing = 10
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        view.addSubview(stackView)
-        stackView.anchor(top: plusPhotoButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 20, paddingLeft: 40, paddingBottom: 0, paddingRight: 40, width: 0, height: 200)
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            plusPhotoButton.setImage(editedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            plusPhotoButton.setImage(originalImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
         
-        //        NSLayoutConstraint.activate([
-        //            stackView.topAnchor.constraint(equalTo: plusPhotoButton.bottomAnchor, constant: 20),
-        //            stackView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 40),
-        //            stackView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
-        //            stackView.heightAnchor.constraint(equalToConstant: 200)
-        //            ])
+        plusPhotoButton.layer.cornerRadius = plusPhotoButton.frame.width / 2
+        plusPhotoButton.layer.masksToBounds = true
+        plusPhotoButton.layer.borderColor = UIColor.black.cgColor
+        plusPhotoButton.layer.borderWidth = 3
         
+        dismiss(animated: true, completion: nil)
     }
     
 }
