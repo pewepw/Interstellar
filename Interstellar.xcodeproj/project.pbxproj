@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A35B8E31F8FEC2A00FDDED8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A35B8E21F8FEC2A00FDDED8 /* LoginController.swift */; };
 		4A45316F1F8E96140059AC31 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A45316E1F8E96140059AC31 /* MainTabBarController.swift */; };
 		4A4531711F8E971C0059AC31 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4531701F8E971C0059AC31 /* UserProfileController.swift */; };
 		4A4531741F8E9F390059AC31 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4531731F8E9F390059AC31 /* UserProfileHeader.swift */; };
 		4ACEA1461F8D64FF0048413D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1451F8D64FF0048413D /* AppDelegate.swift */; };
-		4ACEA1481F8D64FF0048413D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1471F8D64FF0048413D /* ViewController.swift */; };
+		4ACEA1481F8D64FF0048413D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1471F8D64FF0048413D /* SignUpViewController.swift */; };
 		4ACEA14B1F8D64FF0048413D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA1491F8D64FF0048413D /* Main.storyboard */; };
 		4ACEA14D1F8D64FF0048413D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14C1F8D64FF0048413D /* Assets.xcassets */; };
 		4ACEA1501F8D64FF0048413D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */; };
@@ -23,12 +24,13 @@
 /* Begin PBXFileReference section */
 		0F776F3AB72EA625D57D53C9 /* Pods-Interstellar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interstellar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interstellar/Pods-Interstellar.release.xcconfig"; sourceTree = "<group>"; };
 		483BF3137CD0437DFF669271 /* Pods_Interstellar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interstellar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A35B8E21F8FEC2A00FDDED8 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4A45316E1F8E96140059AC31 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		4A4531701F8E971C0059AC31 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		4A4531731F8E9F390059AC31 /* UserProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		4ACEA1421F8D64FF0048413D /* Interstellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interstellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACEA1451F8D64FF0048413D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4ACEA1471F8D64FF0048413D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4ACEA1471F8D64FF0048413D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		4ACEA14A1F8D64FF0048413D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4ACEA14C1F8D64FF0048413D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ACEA14F1F8D64FF0048413D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4A35B8E41F8FEC3700FDDED8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4A35B8E21F8FEC2A00FDDED8 /* LoginController.swift */,
+				4ACEA1471F8D64FF0048413D /* SignUpViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		4A4531721F8E9F210059AC31 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +111,7 @@
 				4ACEA1571F8D787F0048413D /* Helper */,
 				4ACEA1451F8D64FF0048413D /* AppDelegate.swift */,
 				4A45316E1F8E96140059AC31 /* MainTabBarController.swift */,
-				4ACEA1471F8D64FF0048413D /* ViewController.swift */,
+				4A35B8E41F8FEC3700FDDED8 /* Login */,
 				4A4531721F8E9F210059AC31 /* UserProfile */,
 				4ACEA14E1F8D64FF0048413D /* LaunchScreen.storyboard */,
 				4ACEA1491F8D64FF0048413D /* Main.storyboard */,
@@ -256,12 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ACEA1481F8D64FF0048413D /* ViewController.swift in Sources */,
+				4ACEA1481F8D64FF0048413D /* SignUpViewController.swift in Sources */,
 				4ACEA1591F8D78910048413D /* Extensions.swift in Sources */,
 				4A45316F1F8E96140059AC31 /* MainTabBarController.swift in Sources */,
 				4A4531741F8E9F390059AC31 /* UserProfileHeader.swift in Sources */,
 				4A4531711F8E971C0059AC31 /* UserProfileController.swift in Sources */,
 				4ACEA1461F8D64FF0048413D /* AppDelegate.swift in Sources */,
+				4A35B8E31F8FEC2A00FDDED8 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
