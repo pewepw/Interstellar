@@ -12,6 +12,7 @@
 		4A4531711F8E971C0059AC31 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4531701F8E971C0059AC31 /* UserProfileController.swift */; };
 		4A4531741F8E9F390059AC31 /* UserProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4531731F8E9F390059AC31 /* UserProfileHeader.swift */; };
 		4A58178E1F912C6700081A80 /* PhotoSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58178D1F912C6700081A80 /* PhotoSelectorController.swift */; };
+		4A5817901F914DEA00081A80 /* PhotoSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A58178F1F914DEA00081A80 /* PhotoSelectorCell.swift */; };
 		4ACEA1461F8D64FF0048413D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1451F8D64FF0048413D /* AppDelegate.swift */; };
 		4ACEA1481F8D64FF0048413D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACEA1471F8D64FF0048413D /* SignUpViewController.swift */; };
 		4ACEA14B1F8D64FF0048413D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEA1491F8D64FF0048413D /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		4A4531701F8E971C0059AC31 /* UserProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		4A4531731F8E9F390059AC31 /* UserProfileHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileHeader.swift; sourceTree = "<group>"; };
 		4A58178D1F912C6700081A80 /* PhotoSelectorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectorController.swift; sourceTree = "<group>"; };
+		4A58178F1F914DEA00081A80 /* PhotoSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectorCell.swift; sourceTree = "<group>"; };
 		4ACEA1421F8D64FF0048413D /* Interstellar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interstellar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ACEA1451F8D64FF0048413D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ACEA1471F8D64FF0048413D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		4A58178C1F912C4900081A80 /* AddPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				4A58178F1F914DEA00081A80 /* PhotoSelectorCell.swift */,
 				4A58178D1F912C6700081A80 /* PhotoSelectorController.swift */,
 			);
 			name = AddPhoto;
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4ACEA1481F8D64FF0048413D /* SignUpViewController.swift in Sources */,
+				4A5817901F914DEA00081A80 /* PhotoSelectorCell.swift in Sources */,
 				4ACEA1591F8D78910048413D /* Extensions.swift in Sources */,
 				4A45316F1F8E96140059AC31 /* MainTabBarController.swift in Sources */,
 				4A4531741F8E9F390059AC31 /* UserProfileHeader.swift in Sources */,
