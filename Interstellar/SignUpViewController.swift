@@ -77,7 +77,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let attributedTitle = NSMutableAttributedString(string: "Already have an account?  ", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.lightGray])
         attributedTitle.append(NSAttributedString(string: "Sign In", attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14), NSForegroundColorAttributeName: UIColor.rgb(red: 17, green: 154, blue: 237)]))
         button.setAttributedTitle(attributedTitle, for: .normal)
-       button.addTarget(self, action: #selector(handleAlreadyHaveAccount), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleAlreadyHaveAccount), for: .touchUpInside)
         return button
     }()
     
@@ -176,12 +176,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                     guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
                     mainTabBarController.setupViewController()
                     self.dismiss(animated: true, completion: nil)
+                    
                     print("successfully save user into database")
                 })
             })
         }
     }
-    
+   
     func handlePlusPhoto() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
